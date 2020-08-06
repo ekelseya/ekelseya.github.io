@@ -1,2 +1,2 @@
 # ekelseya.github.io
-My GitHub Pages Portfolio
+My simple homepage to start each day
