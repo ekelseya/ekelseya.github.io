@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome, Eryn!</title>
+    <title>Eryn's To Do List | Sometimes simple is best</title>
     <meta name="description" content="Eryn Kelsey-Adkins's personal homepage">
     <meta name="author" content="Eryn Kelsey-Adkins">
     <script
@@ -17,17 +17,30 @@
 </head>
 <body>
     <div id="container">
-        <h1 id="greeting">Welcome, Eryn!</h1>
+        <h1 id="greeting">Howdy, stranger!</h1>
+        <div id="name">
+            <input type="text" id="temp" placeholder = "Tell me your name"/>
+        </div>
         <h2 id="date"></h2>
         <h2 id="time"></h2>
-
-        <input type="text" placeholder="What do you have planned today?">
-
+        <input style="font-family: FontAwesome;" type="text" id="todo" placeholder=" &#xf040   What do you have planned today?">
         <div id="list">
-            <div class="new-to-do"><div class="delete"><i class="far fa-trash-alt"></i></div><div class="text">Click on a to-do item to mark it complete</div></div>
-            <div class="new-to-do"><div class="delete"><i class="far fa-trash-alt"></i></div><div class="text">Click again to remove the line-through</div></div>
-            <div class="new-to-do"><div class="delete"><i class="far fa-trash-alt"></i></div><div class="text">Hover to the left of an item to show the trash can</div></div>
-            <div class="new-to-do"><div class="delete"><i class="far fa-trash-alt"></i></div><div class="text">Click on the trash can to delete the item</div></div>
+            <div class="to-do-item">
+                <div class="delete"><i class="far fa-trash-alt"  aria-hidden="true"></i></div>
+                <div class="text">Click on a to-do item to mark it complete</div>
+            </div>
+            <div class="to-do-item">
+                <div class="delete"><i class="far fa-trash-alt" aria-hidden="true"></i></div>
+                <div class="text">Click again to remove the line-through</div>
+            </div>
+            <div class="to-do-item">
+                <div class="delete"><i class="far fa-trash-alt" aria-hidden="true"></i></div>
+                <div class="text">Hover to the left of an item to show the trash can</div>
+            </div>
+            <div class="to-do-item">
+                <div class="delete"><i class="far fa-trash-alt" aria-hidden="true"></i></div>
+                <div class="text">Click on the trash can to delete the item</div>
+            </div>
         </div>
 
     </div>
