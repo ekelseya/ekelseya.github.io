@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>FASt Q&A</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
@@ -40,51 +41,50 @@
                 </div>
             </div>
         </div>
-        </nav>
+    </nav>
 
-        <div class="container">
-            <div class="section">
-                <h1 class="title">Recent Questions</h1>
-            </div>
-            <div class="section">
-                <div class="tile is-ancestor">
-                    <div class="tile">
-                    <div class="tile">
-                        <div class="tile is-parent is-vertical">
+    <!-- Change this to an unordered list for later JSON -->
+    <div class="container">
+        <div class="section">
+            <h1 class="title">Recent Questions</h1>
+        </div>
+        <div class="section">
+            <ul id="questions" class="tile is-ancestor">
+                <div class="tile">
+                    <div class="tile is-parent is-vertical">
                         <article class="tile is-child notification is-info">
-                            <h2 class="title">Where are dog treats?</h2>
+                            <li class="title">Where are dog treats?</li>
                         </article>
                         <article class="tile is-child notification">
                             <p class="subtitle">Today at 12:10 pm - Joe - 2 answers</p>
                             <a href="#">Click to view answers</a>
                         </article>
-                        </div>
-                        <div class="tile is-parent is-vertical">
-                            <article class="tile is-child notification is-info">
-                            <p class="title">Is Kennel 15 an easy walker?</p>
-                            </article>
-                            <article class="tile is-child notification">
+                    </div>
+                    <div class="tile is-parent is-vertical">
+                        <article class="tile is-child notification is-info">
+                            <li class="title">Is Kennel 15 an easy walker?</li>
+                        </article>
+                        <article class="tile is-child notification">
                             <p class="subtitle">Today at 10:45 am - Rena - no answers</p>
                             <a href="#">Click to add an answer</a>
-                            </article>
-                        </div>
-                        <div class="tile is-parent is-vertical">
-                            <article class="tile is-child notification is-info">
-                            <p class="title">How do I sign on to the computer?</p>
-                            </article>
-                            <article class="tile is-child notification">
+                        </article>
+                    </div>
+                    <div class="tile is-parent is-vertical">
+                        <article class="tile is-child notification is-info">
+                            <li class="title">How do I sign on to the computer?</li>
+                        </article>
+                        <article class="tile is-child notification">
                             <p class="subtitle">Yesterday at 10:45 pm - Eryn - 1 answer</p>
                             <a href="#">Click to view answer</a>
-                            </article>
-                        </div>
-                        <div class="section">
-                            <a class="button is-large is-fullwidth is-link is-light" href="../post-question/index.html">Ask a Question</a>
-                        </div>
+                        </article>
+                    </div>
+                    <div class="section">
+                        <a class="button is-large is-fullwidth is-link is-light" href="../post-question/index.html">Ask a Question</a>
                     </div>
                 </div>
-            </div>
+            </ul>
         </div>
     </div>
-    
   </body>
+  <script src="../script.js"></script>
 </html>

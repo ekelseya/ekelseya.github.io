@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>FASt Q&A</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
@@ -11,7 +12,7 @@
             <a class="navbar-item" href="../index.html">
                 FASt Q&A
             </a>
-            <a class="navbar-item is-active" href="../qa/index.html">
+            <a class="navbar-item" href="../qa/index.html">
                 Q & A
             </a>
     
@@ -46,26 +47,29 @@
             <h1 class="title">Ask a question</h1>
         </div>
         <div class="section">
-            <div class="field">
-                <label class="label">Enter question title here</label>
-                <div class="control">
-                  <input class="input" type="text" placeholder="Question Title">
+            <form id="question-form">
+                <div class="field">
+                    <label class="label">Enter question title here</label>
+                    <div class="control">
+                    <input id="question-title" class="input" type="text" placeholder="Question Title" required>
+                    </div>
                 </div>
-            </div>
-            <div class="field">
-                <label class="label">Enter question body here</label>
-                <div class="control">
-                    <textarea class="textarea is-link" rows="10" placeholder="Question body"></textarea>
+                <div class="field">
+                    <label class="label">Enter question body here (optional)</label>
+                    <div class="control">
+                        <textarea id="question-body" class="textarea is-link" rows="10" placeholder="Add more information here (optional)"></textarea>
+                    </div>
                 </div>
-            </div>
-            <div class="field is-grouped">
-                <div class="control">
-                  <button class="button is-link">Submit</button>
+                <div class="field is-grouped">
+                    <div class="control">
+                    <button id="question-submit" class="button is-link">Submit</button>
+                    </div>
+                    <div class="control">
+                    <button id="question-cancel" class="button is-link is-light">Cancel</button>
+                    </div>
                 </div>
-                <div class="control">
-                  <button class="button is-link is-light">Cancel</button>
-                </div>
-            </div>
+            </form>
         </div>
   </body>
+  <script src="../script.js"></script>
 </html>

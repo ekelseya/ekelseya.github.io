@@ -1,3 +1,4 @@
+// Navbar functionality
 document.addEventListener('DOMContentLoaded', () => {
 
   // Get all "navbar-burger" elements
@@ -19,3 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+// Submit question functionality
+const questionForm = document.getElementById("question-form");
+const questionInput = document.getElementById("question-input");
+const questionSubmit = document.getElementById("question-submit");
+const questions = document.getElementById("questions");
