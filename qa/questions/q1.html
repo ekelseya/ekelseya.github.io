@@ -46,29 +46,42 @@
     <!-- Change this to an unordered list for later JSON -->
     <div class="container">
         <div class="section">
-            <h1 class="title">Recent Questions</h1>
+            <div class="tile is-ancestor">
+                <div class="tile is-child notification is-info">
+                    <h1 class="title">Where are dog treats?</h1>
+                    <p class="subtitle">Today at 12:10 pm - Joe - 2 answers</p>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile notification">
+                    <p>There are also high-value treats at front reception!</p>
+                    <p>Joe answered yesterday at 11:30 am</p>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile notification">
+                    <p>They are in the stinky closet!</p>
+                    <p>Eryn answered yesterday at 11:00 am</p>
+                </div>
+            </div>
         </div>
         <div class="section">
-            <ul id="questions" class="tile is-ancestor">
-                <li class="tile notification is-info">
-                    <p class="title">Where are dog treats?</p>
-                    <p class="subtitle">Today at 12:10 pm - Joe - 2 answers</p>
-                    <a href="./questions/q1.html">Click to view answers</a>
-                </li>
-                <li class="tile notification is-info">
-                    <p class="title">Is Kennel 15 an easy walker?</p>
-                    <p class="subtitle">Today at 10:45 am - Rena - no answers</p>
-                    <a href="#">Click to add an answer</a>
-                </li>
-                <li class="tile notification is-info">
-                    <p class="title">How do I sign on to the computer?</p>
-                    <p class="subtitle">Yesterday at 10:45 pm - Eryn - 1 answer</p>
-                    <a href="#">Click to view answers</a>
-                </li>
-            </ul>
-            <div class="section">
-                <a class="button is-large is-fullwidth is-link is-light" href="../post-question/index.html">Ask a Question</a>
-            </div>
+            <form id="answer-form">
+                <div class="field">
+                    <label class="label">Enter answer here</label>
+                    <div class="control">
+                    <input id="answer" class="input" type="text" placeholder="Answer Text">
+                    </div>
+                </div>
+                <div class="field is-grouped">
+                    <div class="control">
+                    <button id="answer-submit" class="button is-link">Submit</button>
+                    </div>
+                    <div class="control">
+                    <button id="answer-cancel" class="button is-link is-light">Cancel</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
   </body>
