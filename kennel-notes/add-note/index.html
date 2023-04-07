@@ -9,10 +9,10 @@
   <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="../../index.html">
+            <a class="navbar-item" href="../index.html">
                 FASt Q&A
             </a>
-            <a class="navbar-item" href="../index.html">
+            <a class="navbar-item" href="../qa/index.html">
                 Q & A
             </a>
     
@@ -41,37 +41,35 @@
                 </div>
             </div>
         </div>
-    </nav>
+        </nav>
 
-    <!-- Change this to an unordered list for later JSON -->
-    <div class="container">
         <div class="section">
-            <div class="tile is-ancestor">
-                <div class="tile is-child notification is-info">
-                    <h1 class="title">Is Kennel 15 an easy walker?</h1>
-                    <p class="subtitle">Today at 10:45 am - Rena - no answers</p>
-                </div>
-            </div>
+            <h1 class="title">Leave a note</h1>
         </div>
         <div class="section">
-            <form id="answer-form">
+            <form id="note-form">
                 <div class="field">
-                    <label class="label">Enter answer here</label>
+                    <label class="label">Enter note title here</label>
                     <div class="control">
-                    <input id="answer" class="input" type="text" placeholder="Answer Text">
+                    <input id="note-title" class="input" type="text" placeholder="Note Title" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Enter note body here (optional)</label>
+                    <div class="control">
+                        <textarea id="note-body" class="textarea is-link" rows="10" placeholder="Add more information here (optional)"></textarea>
                     </div>
                 </div>
                 <div class="field is-grouped">
                     <div class="control">
-                    <button id="answer-submit" class="button is-link">Submit</button>
+                    <button id="note-submit" class="button is-link">Submit</button>
                     </div>
                     <div class="control">
-                    <button id="answer-cancel" class="button is-link is-light">Cancel</button>
+                    <button id="note-cancel" class="button is-link is-light">Cancel</button>
                     </div>
                 </div>
             </form>
         </div>
-    </div>
   </body>
   <script src="../script.js"></script>
 </html>
