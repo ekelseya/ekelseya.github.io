@@ -42,6 +42,7 @@ function questionSubmit() {
   } else {
       let question = document.getElementById('question').value;
       sessionStorage.setItem('question', question);
+      window.location.href="../../qa/index.html";
   }
 }
 
