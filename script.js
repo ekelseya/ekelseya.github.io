@@ -35,20 +35,38 @@ function checkUsername() {
 }
 
 function questionSubmit() {
-  let question = document.getElementById('question').value;
-  sessionStorage.setItem('question', question);
-  window.location.href="../index.html";
+  // Should add an error check if the user isn't logged in
+  let username = sessionStorage.getItem("username");
+  if (!username) {
+    window.alert("Please sign in first");
+  } else {
+      let question = document.getElementById('question').value;
+      sessionStorage.setItem('question', question);
+  }
 }
 
 function addQuestion() {
   let question = sessionStorage.getItem("question");
   let username = sessionStorage.getItem("username");
+  const date = new Date(Date.now());
   if (question) {
     document.getElementById("questions").insertAdjacentHTML("afterbegin",
       '<div class="tile notification is-info">' +
-      '<p class="title">' + question +'</p>' +
-      '<p class="subtitle">Today at 12:10 pm - ' + username + ' - no answers</p>' +
+      '<p class="title">' + question + '</p>' +
+      '<p class="subtitle">Today at ' + date.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}) + ' - ' + username + ' - no answers</p>' +
       '<a href="./questions/q4.html">Click to add an answer</a>' +
       '</div>');
+  }
+}
+
+function dummyQuestion() {
+  let question = sessionStorage.getItem("question");
+  let username = sessionStorage.getItem("username");
+  const date = new Date(Date.now());
+  if (question) {
+    document.getElementById("new-question").insertAdjacentHTML("afterbegin",
+      '<h1 class="title">' + question + '</h1>' +
+      '<p id="new-question-details" class="subtitle">' + date.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}) + 
+      ' - ' + username + ' - no answers</p>');
   }
 }

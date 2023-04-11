@@ -6,7 +6,7 @@
     <title>FASt Q&A</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
-  <body>
+  <body onload="dummyQuestion()">
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="../../index.html">
@@ -46,9 +46,7 @@
     <div class="container">
         <div class="section">
             <div class="tile is-ancestor">
-                <div class="tile is-child notification is-info">
-                    <h1 id="new-question" class="title">This is the dummy field</h1>
-                    <p id="new-question-details" class="subtitle">Date and time - Username - no answers</p>
+                <div id="new-question" class="tile is-child notification is-info">
                 </div>
             </div>
         </div>
@@ -72,5 +70,5 @@
         </div>
     </div>
   </body>
-  <script src="../script.js"></script>
+  <script src="../../script.js"></script>
 </html>
