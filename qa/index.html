@@ -6,7 +6,7 @@
     <title>FASt Q&A</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
-  <body>
+  <body onload="addQuestion()">
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="../index.html">
@@ -48,26 +48,27 @@
             <h1 class="title">Recent Questions</h1>
         </div>
         <div class="section">
-            <ul id="questions" class="tile is-ancestor">
-                <li class="tile notification is-info">
+            <a class="button is-large is-fullwidth is-link is-light" href="./post-question/index.html">Ask a Question</a>
+        </div>
+        <div class="section">
+            <div id="questions" class="tile is-ancestor">
+                <div class="tile notification is-info">
                     <p class="title">Where are dog treats?</p>
                     <p class="subtitle">Today at 12:10 pm - Joe - 2 answers</p>
                     <a href="./questions/q1.html">Click to view answers</a>
-                </li>
-                <li class="tile notification is-info">
+                </div>
+                <div class="tile notification is-info">
                     <p class="title">Is Kennel 15 an easy walker?</p>
                     <p class="subtitle">Today at 10:45 am - Rena - no answers</p>
                     <a href="./questions/q2.html">Click to add an answer</a>
-                </li>
-                <li class="tile notification is-info">
+                </div>
+                <div class="tile notification is-info">
                     <p class="title">How do I sign on to the computer?</p>
                     <p class="subtitle">Yesterday at 10:45 pm - Eryn - 1 answer</p>
                     <a href="./questions/q3.html">Click to view answers</a>
-                </li>
-            </ul>
-            <div class="section">
-                <a class="button is-large is-fullwidth is-link is-light" href="./post-question/index.html">Ask a Question</a>
+                </div>
             </div>
+
         </div>
     </div>
   </body>

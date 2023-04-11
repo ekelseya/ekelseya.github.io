@@ -21,8 +21,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// Submit question functionality
-const questionForm = document.getElementById("question-form");
-const questionInput = document.getElementById("question-input");
-const questionSubmit = document.getElementById("question-submit");
-const questions = document.getElementById("questions");
+function setUsername() {
+  let usernameInput = document.getElementById('username').value;
+  sessionStorage.setItem('username', usernameInput);
+  window.location.href="index.html";
+}
+
+function checkUsername() {
+  let username = sessionStorage.getItem("username");
+  if (username) {
+    document.getElementById('welcome-message').innerHTML = "Welcome, " + username;
+  }
+}
+
+function questionSubmit() {
+  let question = document.getElementById('question').value;
+  sessionStorage.setItem('question', question);
+  window.location.href="../index.html";
+}
+
+function addQuestion() {
+  let question = sessionStorage.getItem("question");
+  let username = sessionStorage.getItem("username");
+  if (question) {
+    document.getElementById("questions").insertAdjacentHTML("afterbegin",
+      '<div class="tile notification is-info">' +
+      '<p class="title">' + question +'</p>' +
+      '<p class="subtitle">Today at 12:10 pm - ' + username + ' - no answers</p>' +
+      '<a href="./questions/q4.html">Click to add an answer</a>' +
+      '</div>');
+  }
+}

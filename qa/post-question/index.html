@@ -49,27 +49,21 @@
         <div class="section">
             <form id="question-form">
                 <div class="field">
-                    <label class="label">Enter question title here</label>
+                    <label class="label">Enter question here</label>
                     <div class="control">
-                    <input id="question-title" class="input" type="text" placeholder="Question Title" required>
-                    </div>
-                </div>
-                <div class="field">
-                    <label class="label">Enter question body here (optional)</label>
-                    <div class="control">
-                        <textarea id="question-body" class="textarea is-link" rows="10" placeholder="Add more information here (optional)"></textarea>
+                    <input id="question" class="input" type="text" placeholder="What's your question?" required>
                     </div>
                 </div>
                 <div class="field is-grouped">
                     <div class="control">
-                    <button id="question-submit" class="button is-link">Submit</button>
+                    <button type="button" id="question-submit" onclick="questionSubmit()" class="button is-link">Submit</button>
                     </div>
                     <div class="control">
-                    <button id="question-cancel" class="button is-link is-light">Cancel</button>
+                    <button type="reset" id="question-cancel" class="button is-link is-light">Cancel</button>
                     </div>
                 </div>
             </form>
         </div>
   </body>
-  <script src="../script.js"></script>
+  <script src="../../script.js"></script>
 </html>
