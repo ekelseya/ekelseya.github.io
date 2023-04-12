@@ -83,7 +83,7 @@ function answer1Add() {
   const date = new Date(Date.now());
   if (answer) {
     document.getElementById("answers").insertAdjacentHTML("afterbegin",
-      `<div class="tile"><div class="tile notification"><p>${answer}</p><p>${username}answered today at${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
+      `<div class="tile"><div class="tile notification"><p>${answer}</p><p>${username} answered today at ${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
   }
 }
 
@@ -104,7 +104,7 @@ function answer2Add() {
   const date = new Date(Date.now());
   if (answer) {
     document.getElementById("answers").insertAdjacentHTML("afterbegin",
-      `<div class="tile"><div class="tile notification"><p>${answer}</p><p>${username}answered today at${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
+      `<div class="tile"><div class="tile notification"><p>${answer}</p><p>${username} answered today at ${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
   }
 }
 
@@ -125,7 +125,7 @@ function answer3Add() {
   const date = new Date(Date.now());
   if (answer) {
     document.getElementById("answers").insertAdjacentHTML("afterbegin",
-      `<div class="tile"><div class="tile notification"><p>${answer}</p><p>${username}answered today at${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
+      `<div class="tile"><div class="tile notification"><p>${answer}</p><p>${username} answered today at ${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
   }
 }
 
@@ -146,7 +146,7 @@ function answer4Add() {
   const date = new Date(Date.now());
   if (answer) {
     document.getElementById("answers").insertAdjacentHTML("afterbegin",
-      `<div class="tile"><div class="tile notification"><p>${answer}</p><p>${username}answered today at${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
+      `<div class="tile"><div class="tile notification"><p>${answer}</p><p>${username} answered today at ${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
   }
 }
 
