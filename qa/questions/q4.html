@@ -6,7 +6,7 @@
     <title>FASt Q&A</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
-  <body onload="dummyQuestion()">
+  <body onload="dummyQuestion();answer4Add()">
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="../../index.html">
@@ -49,18 +49,21 @@
                 <div id="new-question" class="tile is-child notification is-info">
                 </div>
             </div>
+            <div id="answers">
+
+            </div>
         </div>
         <div class="section">
             <form id="answer-form">
                 <div class="field">
                     <label class="label">Enter answer here</label>
                     <div class="control">
-                    <input id="answer" class="input" type="text" placeholder="Answer Text">
+                    <input id="answer4" class="input" type="text" placeholder="Answer Text">
                     </div>
                 </div>
                 <div class="field is-grouped">
                     <div class="control">
-                    <button id="answer-submit" class="button is-link">Submit</button>
+                    <button type="button" onclick="answer4Submit()" id="answer-submit" class="button is-link">Submit</button>
                     </div>
                     <div class="control">
                     <button id="answer-cancel" class="button is-link is-light">Cancel</button>

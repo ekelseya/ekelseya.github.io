@@ -6,7 +6,7 @@
     <title>FASt Q&A</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
-  <body>
+  <body onload="answer1Add()">
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="../../index.html">
@@ -51,16 +51,18 @@
                     <p class="subtitle">Today at 12:10 pm - Joe - 2 answers</p>
                 </div>
             </div>
-            <div class="tile">
-                <div class="tile notification">
-                    <p>There are also high-value treats at front reception!</p>
-                    <p>Joe answered yesterday at 11:30 am</p>
+            <div id="answers">
+                <div class="tile">
+                    <div class="tile notification">
+                        <p>There are also high-value treats at front reception!</p>
+                        <p>Joe answered yesterday at 11:30 am</p>
+                    </div>
                 </div>
-            </div>
-            <div class="tile">
-                <div class="tile notification">
-                    <p>They are in the stinky closet!</p>
-                    <p>Eryn answered yesterday at 11:00 am</p>
+                <div class="tile">
+                    <div class="tile notification">
+                        <p>They are in the stinky closet!</p>
+                        <p>Eryn answered yesterday at 11:00 am</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,20 +71,20 @@
                 <div class="field">
                     <label class="label">Enter answer here</label>
                     <div class="control">
-                    <input id="answer" class="input" type="text" placeholder="Answer Text">
+                    <input id="answer1" class="input" type="text" placeholder="Answer Text">
                     </div>
                 </div>
                 <div class="field is-grouped">
                     <div class="control">
-                    <button id="answer-submit" class="button is-link">Submit</button>
+                    <button type="button" id="answer-submit" class="button is-link" onclick="answer1Submit()">Submit</button>
                     </div>
                     <div class="control">
-                    <button id="answer-cancel" class="button is-link is-light">Cancel</button>
+                    <button type="reset" id="answer-cancel" class="button is-link is-light">Cancel</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
   </body>
-  <script src="../script.js"></script>
+  <script src="../../script.js"></script>
 </html>

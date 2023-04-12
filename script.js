@@ -71,3 +71,112 @@ function dummyQuestion() {
       ' - ' + username + ' - no answers</p>');
   }
 }
+
+
+function answer1Submit() {
+  // Should add an error check if the user isn't logged in
+  let username = sessionStorage.getItem("username");
+  if (!username) {
+    window.alert("Please sign in first");
+  } else {
+      let answer1 = document.getElementById('answer1').value;
+      sessionStorage.setItem('answer1', answer1);
+      window.location.href="../../qa/questions/q1.html";
+  }
+}
+
+function answer1Add() {
+  let answer = sessionStorage.getItem("answer1");
+  let username = sessionStorage.getItem("username");
+  const date = new Date(Date.now());
+  if (answer) {
+    document.getElementById("answers").insertAdjacentHTML("afterbegin",
+      '<div class="tile">' + 
+      '<div class="tile notification">' +
+          '<p>' + answer + '</p>' +
+          '<p>' + username + 'answered today at' + date.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}) + '</p>' +
+      '</div>' +
+      '</div>');
+  }
+}
+
+function answer2Submit() {
+  // Should add an error check if the user isn't logged in
+  let username = sessionStorage.getItem("username");
+  if (!username) {
+    window.alert("Please sign in first");
+  } else {
+      let answer2 = document.getElementById('answer2').value;
+      sessionStorage.setItem('answer2', answer2);
+      window.location.href="../../qa/questions/q2.html";
+  }
+}
+
+function answer2Add() {
+  let answer = sessionStorage.getItem("answer2");
+  let username = sessionStorage.getItem("username");
+  const date = new Date(Date.now());
+  if (answer) {
+    document.getElementById("answers").insertAdjacentHTML("afterbegin",
+      '<div class="tile">' + 
+      '<div class="tile notification">' +
+          '<p>' + answer + '</p>' +
+          '<p>' + username + 'answered today at' + date.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}) + '</p>' +
+      '</div>' +
+      '</div>');
+  }
+}
+
+function answer3Submit() {
+  // Should add an error check if the user isn't logged in
+  let username = sessionStorage.getItem("username");
+  if (!username) {
+    window.alert("Please sign in first");
+  } else {
+      let answer3 = document.getElementById('answer3').value;
+      sessionStorage.setItem('answer3', answer3);
+      window.location.href="../../qa/questions/q3.html";
+  }
+}
+
+function answer3Add() {
+  let answer = sessionStorage.getItem("answer3");
+  let username = sessionStorage.getItem("username");
+  const date = new Date(Date.now());
+  if (answer) {
+    document.getElementById("answers").insertAdjacentHTML("afterbegin",
+      '<div class="tile">' + 
+      '<div class="tile notification">' +
+          '<p>' + answer + '</p>' +
+          '<p>' + username + 'answered today at' + date.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}) + '</p>' +
+      '</div>' +
+      '</div>');
+  }
+}
+
+function answer4Submit() {
+  // Should add an error check if the user isn't logged in
+  let username = sessionStorage.getItem("username");
+  if (!username) {
+    window.alert("Please sign in first");
+  } else {
+      let answer4 = document.getElementById('answer4').value;
+      sessionStorage.setItem('answer4', answer4);
+      window.location.href="../../qa/questions/q4.html";
+  }
+}
+
+function answer4Add() {
+  let answer = sessionStorage.getItem("answer4");
+  let username = sessionStorage.getItem("username");
+  const date = new Date(Date.now());
+  if (answer) {
+    document.getElementById("answers").insertAdjacentHTML("afterbegin",
+      '<div class="tile">' + 
+      '<div class="tile notification">' +
+          '<p>' + answer + '</p>' +
+          '<p>' + username + 'answered today at' + date.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}) + '</p>' +
+      '</div>' +
+      '</div>');
+  }
+}
