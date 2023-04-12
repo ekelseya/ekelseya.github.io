@@ -35,7 +35,6 @@ function checkUsername() {
 }
 
 function questionSubmit() {
-  // Should add an error check if the user isn't logged in
   let username = sessionStorage.getItem("username");
   if (!username) {
     window.alert("Please sign in first");
@@ -52,11 +51,7 @@ function addQuestion() {
   const date = new Date(Date.now());
   if (question) {
     document.getElementById("questions").insertAdjacentHTML("afterbegin",
-      '<div class="tile notification is-info">' +
-      '<p class="title">' + question + '</p>' +
-      '<p class="subtitle">Today at ' + date.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}) + ' - ' + username + ' - no answers</p>' +
-      '<a href="./questions/q4.html">Click to add an answer</a>' +
-      '</div>');
+      `<div class="tile notification is-info"><p class="title">${question}</p><p class="subtitle">Today at ${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })} - ${username} - no answers</p><a href="./questions/q4.html">Click to add an answer</a></div>`);
   }
 }
 
@@ -66,15 +61,12 @@ function dummyQuestion() {
   const date = new Date(Date.now());
   if (question) {
     document.getElementById("new-question").insertAdjacentHTML("afterbegin",
-      '<h1 class="title">' + question + '</h1>' +
-      '<p id="new-question-details" class="subtitle">' + date.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}) + 
-      ' - ' + username + ' - no answers</p>');
+      `<h1 class="title">${question}</h1><p id="new-question-details" class="subtitle">${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })} - ${username} - no answers</p>`);
   }
 }
 
 
 function answer1Submit() {
-  // Should add an error check if the user isn't logged in
   let username = sessionStorage.getItem("username");
   if (!username) {
     window.alert("Please sign in first");
@@ -91,17 +83,11 @@ function answer1Add() {
   const date = new Date(Date.now());
   if (answer) {
     document.getElementById("answers").insertAdjacentHTML("afterbegin",
-      '<div class="tile">' + 
-      '<div class="tile notification">' +
-          '<p>' + answer + '</p>' +
-          '<p>' + username + 'answered today at' + date.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}) + '</p>' +
-      '</div>' +
-      '</div>');
+      `<div class="tile"><div class="tile notification"><p>${answer}</p><p>${username}answered today at${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
   }
 }
 
 function answer2Submit() {
-  // Should add an error check if the user isn't logged in
   let username = sessionStorage.getItem("username");
   if (!username) {
     window.alert("Please sign in first");
@@ -118,17 +104,11 @@ function answer2Add() {
   const date = new Date(Date.now());
   if (answer) {
     document.getElementById("answers").insertAdjacentHTML("afterbegin",
-      '<div class="tile">' + 
-      '<div class="tile notification">' +
-          '<p>' + answer + '</p>' +
-          '<p>' + username + 'answered today at' + date.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}) + '</p>' +
-      '</div>' +
-      '</div>');
+      `<div class="tile"><div class="tile notification"><p>${answer}</p><p>${username}answered today at${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
   }
 }
 
 function answer3Submit() {
-  // Should add an error check if the user isn't logged in
   let username = sessionStorage.getItem("username");
   if (!username) {
     window.alert("Please sign in first");
@@ -145,17 +125,11 @@ function answer3Add() {
   const date = new Date(Date.now());
   if (answer) {
     document.getElementById("answers").insertAdjacentHTML("afterbegin",
-      '<div class="tile">' + 
-      '<div class="tile notification">' +
-          '<p>' + answer + '</p>' +
-          '<p>' + username + 'answered today at' + date.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}) + '</p>' +
-      '</div>' +
-      '</div>');
+      `<div class="tile"><div class="tile notification"><p>${answer}</p><p>${username}answered today at${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
   }
 }
 
 function answer4Submit() {
-  // Should add an error check if the user isn't logged in
   let username = sessionStorage.getItem("username");
   if (!username) {
     window.alert("Please sign in first");
@@ -172,11 +146,132 @@ function answer4Add() {
   const date = new Date(Date.now());
   if (answer) {
     document.getElementById("answers").insertAdjacentHTML("afterbegin",
-      '<div class="tile">' + 
-      '<div class="tile notification">' +
-          '<p>' + answer + '</p>' +
-          '<p>' + username + 'answered today at' + date.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}) + '</p>' +
-      '</div>' +
-      '</div>');
+      `<div class="tile"><div class="tile notification"><p>${answer}</p><p>${username}answered today at${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
+  }
+}
+
+function note1Submit() {
+  let username = sessionStorage.getItem("username");
+  if (!username) {
+    window.alert("Please sign in first");
+  } else {
+      let note1 = document.getElementById('note1').value;
+      sessionStorage.setItem('note1', note1);
+      window.location.href="../../kennel-notes/notes/kennel-01.html";
+  }
+}
+
+function note1Add() {
+  let note = sessionStorage.getItem("note1");
+  let username = sessionStorage.getItem("username");
+  const date = new Date(Date.now());
+  if (note) {
+    document.getElementById("notes").insertAdjacentHTML("afterbegin",
+      `<div class="tile"><div class="tile notification"><p>${note}</p><p>${username} - today at ${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
+  }
+}
+
+function note2Submit() {
+  let username = sessionStorage.getItem("username");
+  if (!username) {
+    window.alert("Please sign in first");
+  } else {
+      let note2 = document.getElementById('note2').value;
+      sessionStorage.setItem('note2', note2);
+      window.location.href="../../kennel-notes/notes/kennel-02.html";
+  }
+}
+
+function note2Add() {
+  let note = sessionStorage.getItem("note2");
+  let username = sessionStorage.getItem("username");
+  const date = new Date(Date.now());
+  if (note) {
+    document.getElementById("notes").insertAdjacentHTML("afterbegin",
+      `<div class="tile"><div class="tile notification"><p>${note}</p><p>${username} - today at ${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
+  }
+}
+
+function note3Submit() {
+  let username = sessionStorage.getItem("username");
+  if (!username) {
+    window.alert("Please sign in first");
+  } else {
+      let note3 = document.getElementById('note3').value;
+      sessionStorage.setItem('note3', note3);
+      window.location.href="../../kennel-notes/notes/kennel-03.html";
+  }
+}
+
+function note3Add() {
+  let note = sessionStorage.getItem("note3");
+  let username = sessionStorage.getItem("username");
+  const date = new Date(Date.now());
+  if (note) {
+    document.getElementById("notes").insertAdjacentHTML("afterbegin",
+      `<div class="tile"><div class="tile notification"><p>${note}</p><p>${username} - today at ${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
+  }
+}
+
+function note4Submit() {
+  let username = sessionStorage.getItem("username");
+  if (!username) {
+    window.alert("Please sign in first");
+  } else {
+      let note4 = document.getElementById('note4').value;
+      sessionStorage.setItem('note4', note4);
+      window.location.href="../../kennel-notes/notes/kennel-04.html";
+  }
+}
+
+function note4Add() {
+  let note = sessionStorage.getItem("note4");
+  let username = sessionStorage.getItem("username");
+  const date = new Date(Date.now());
+  if (note) {
+    document.getElementById("notes").insertAdjacentHTML("afterbegin",
+      `<div class="tile"><div class="tile notification"><p>${note}</p><p>${username} - today at ${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
+  }
+}
+
+function note5Submit() {
+  let username = sessionStorage.getItem("username");
+  if (!username) {
+    window.alert("Please sign in first");
+  } else {
+      let note5 = document.getElementById('note5').value;
+      sessionStorage.setItem('note5', note5);
+      window.location.href="../../kennel-notes/notes/kennel-05.html";
+  }
+}
+
+function note5Add() {
+  let note = sessionStorage.getItem("note5");
+  let username = sessionStorage.getItem("username");
+  const date = new Date(Date.now());
+  if (note) {
+    document.getElementById("notes").insertAdjacentHTML("afterbegin",
+      `<div class="tile"><div class="tile notification"><p>${note}</p><p>${username} - today at ${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
+  }
+}
+
+function note6Submit() {
+  let username = sessionStorage.getItem("username");
+  if (!username) {
+    window.alert("Please sign in first");
+  } else {
+      let note6 = document.getElementById('note6').value;
+      sessionStorage.setItem('note6', note6);
+      window.location.href="../../kennel-notes/notes/kennel-06.html";
+  }
+}
+
+function note6Add() {
+  let note = sessionStorage.getItem("note6");
+  let username = sessionStorage.getItem("username");
+  const date = new Date(Date.now());
+  if (note) {
+    document.getElementById("notes").insertAdjacentHTML("afterbegin",
+      `<div class="tile"><div class="tile notification"><p>${note}</p><p>${username} - today at ${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
   }
 }
