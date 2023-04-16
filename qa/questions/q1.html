@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>FASt Q&A</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/d9120d3d9b.js" crossorigin="anonymous"></script>
   </head>
-  <body onload="answer1Add()">
+  <body onload="answer1Add();timerCountdown()">
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="../../index.html">
@@ -31,10 +32,7 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                    <a class="button is-info">
-                        <strong>Sign up</strong>
-                    </a>
-                    <a class="button is-light">
+                    <a href="../../login.html" class="button is-info">
                         Log in
                     </a>
                     </div>
@@ -48,20 +46,20 @@
             <div class="tile is-ancestor">
                 <div class="tile is-child notification is-info">
                     <h1 class="title">Where are dog treats?</h1>
-                    <p class="subtitle">Today at 12:10 pm - Joe - 2 answers</p>
+                    <p class="subtitle">Today at 12:10 pm - Joe - <span id="q1-answers">2 answers</span> 2 answers</p>
                 </div>
             </div>
             <div id="answers">
                 <div class="tile">
                     <div class="tile notification">
                         <p>There are also high-value treats at front reception!</p>
-                        <p>Joe answered yesterday at 11:30 am</p>
+                        <p>Joe answered today at 12:30 pm</p>
                     </div>
                 </div>
                 <div class="tile">
                     <div class="tile notification">
                         <p>They are in the stinky closet!</p>
-                        <p>Eryn answered yesterday at 11:00 am</p>
+                        <p>Eryn answered today at 12:15 pm</p>
                     </div>
                 </div>
             </div>

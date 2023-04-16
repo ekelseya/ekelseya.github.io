@@ -275,3 +275,42 @@ function note6Add() {
       `<div class="tile"><div class="tile notification"><p>${note}</p><p>${username} - today at ${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
   }
 }
+
+// TODO Timer function
+// To be added to every page
+// Save time variable (30 seconds?) to session storage
+// Every second, retrieve time variable, decrement, and save
+// When time variable = 0, show notification icon with link to new answer
+// notification icon: https://iconmonstr.com/?s=notification
+
+function notificationAdd() {
+  document.getElementById("hamburger").insertAdjacentHTML("beforebegin",
+    `<a class="navbar-item" href="/notifications.html">
+      <i class="fas fa-2x fa-solid fa-bell" style="color: #ff0000;"></i>
+     </a>`);
+  console.log("notification");
+}
+
+function notificationSet() {
+  const date = new Date(Date.now());
+  const set = sessionStorage.getItem("notification");
+  if (set) {
+    document.getElementById("answers").insertAdjacentHTML("afterbegin",
+      `<div class="tile"><div class="tile notification"><p>It is posted in the adoptable dog area! </p><p>Joe answered today at ${date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p></div></div>`);
+  }
+}
+
+
+function timerCountdown() {
+  let countdown = sessionStorage.getItem("countdown");
+  if (!countdown) {
+    sessionStorage.setItem("countdown", 5);
+    countdown = 5;
+  }
+  if (countdown == 0) {
+    notificationAdd();
+    sessionStorage.setItem("notification", "set");
+  }
+    countdown -= 1;
+    sessionStorage.setItem("countdown", countdown);
+}

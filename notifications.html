@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/d9120d3d9b.js" crossorigin="anonymous"></script>
   </head>
 
-  <body onload="checkUsername(); timerCountdown()">
+  <body onload="checkUsername()">
     <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item is-active" href="#">
@@ -44,42 +44,19 @@
 
     <div class="container">
         <div class="section">
-            <h1 class="title is-2">Foothills Animal Shelter</h1>
-            <h2 id="welcome-message" class="subtitle">Question and Answer Page</h2>
+            <h1 class="title is-2">Notifications</h1>
         </div>
         <div class="section">
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <a href="qa/index.html">
-                        <div class="card-image">
-                            <figure class="image is-square">
-                                <img src="images/qna.png" alt="Link to Q and A">
-                            </figure>
-                        </div>
-                    </a>
-                    <div class="card-content">
-                        <p class="title is-2 pl-6">Ask or answer a question</p>
-                    </div>
+            <div id="notifications" class="tile is-ancestor">
+                <div class="tile notification is-info">
+                    <p class="subtitle">Joe answered a question!</p>
+                    <p>Just now</p>
+                    <a href="./qa/questions/q2.html">Click to view answer</a>
                 </div>
             </div>
-            <div class="column">
-                <div class="card">
-                    <a href="kennel-notes/index.html">
-                        <div class="card-image">
-                          <figure class="image is-square">
-                            <img src="images/dog.png" alt="Link to Kennel Notes">
-                          </figure>
-                        </div>
-                    </a>
-                    <div class="card-content">
-                      <p class="title is-2 pl-5">Leave a note on an animal</p>
-                    </div>
-                </div>
-            </div>
-          </div>
+
         </div>
-      </div>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>
